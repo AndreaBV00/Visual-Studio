@@ -50,4 +50,4 @@ nota_final = (nota_1 * 0.2 + nota_2 * 0.3 + nota_3 * 0.5) #no divido porque la s
 
 print('La nota final del alumno es: ', nota_final)
 
-#lo subí a github
+#lo subí a github ahora

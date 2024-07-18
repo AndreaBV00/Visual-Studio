@@ -24,4 +24,8 @@ usuario = {
     'direccion': direccion #Carrera 7 - Bogotá
 }
 print(f'{usuario["nombre"]} tiene {usuario["edad"]} años, y vive en {usuario["direccion"]}') #Juan tiene 25 años, y vive en Carrera 7 - Bogotá
-    
+
+
+#esto es una prueba
+
+andrea = 'Andrea'

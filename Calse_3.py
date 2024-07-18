@@ -26,3 +26,5 @@ print(conjunto_a)  #{'A', 'r', 'i', 'e', 'l', 'P', 'o', 'n', 't', 'h', 'y'} //co
 conjunto_a.discard('P')
 print(conjunto_a)  #{'A', 'r', 'i', 'e', 'l', 'o', 'n', 't', 'h', 'y'} //conjunto de letras de la palabra Ariel y Python sin la letra P
 conjunto_a.remove('H')  #si el elemento no está en el conjunto, arroja un error
+
+vvv = {1,2,3,4,5}

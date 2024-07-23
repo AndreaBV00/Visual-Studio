@@ -29,3 +29,4 @@ print(f'{usuario["nombre"]} tiene {usuario["edad"]} años, y vive en {usuario["d
 #esto es una prueba
 
 andrea = 'Andrea'
+

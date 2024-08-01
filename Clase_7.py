@@ -107,3 +107,70 @@ while True: #Bucle infinito, se ejecutará hasta que se rompa
     suma += int(valor)
 print(f'La suma de los números ingresados es: {suma}')
 print('Finalizando la ejecución')"""
+
+#Ejemplo de bucle for
+
+"""lista =[10, 20, 30, 40, 50]
+lista_dobles = []
+for i in lista:
+    lista_dobles.append(i*2)
+print(lista_dobles)"""
+#En este caso, se crea una lista con los dobles de los elementos de la lista original.
+
+"""personas = [('Juan', 25), ('María', 30), ('Pedro', 35)]
+for persona in personas:
+    print(f'{persona[0]} tiene {persona[1]} años')"""
+#En este caso, se recorre la lista de tuplas personas y se imprime el nombre y la edad de cada persona.
+"""for nombre, edad in personas:
+    print(f'{nombre} tiene {edad} años')    """
+#En este caso, se recorre la lista de tuplas personas y se desempaquetan los elementos de cada tupla en las variables nombre y edad.
+
+"""paises = ['Argentina', 'Brasil', 'Chile', 'Uruguay', 'Paraguay', 'Bolivia', 'Corea del Sur'] 
+#uso la estrategia del candidato para recorrer la lista de paises y ver la posicion del pais que tiene mas caracteres
+
+candidato = paises [0]
+pos_candidato = 0
+for i, pais in enumerate(paises): #enumerate devuelve el indice y el valor de la lista
+    if len(pais) > len(candidato):
+        candidato = pais
+        pos_candidato = i
+print(f'El país con más caracteres es {candidato} y se encuentra en la posición {pos_candidato}')"""
+
+#recorrer un string, coleccion de caracteres
+
+"""nombre = 'Juan'
+for letra in nombre:
+    print(letra)"""
+#En este caso, se recorre el string nombre y se imprime cada letra.
+
+#range es una función que devuelve un rango de números
+#range(inicio, fin, paso)
+#inicio: número inicial del rango
+#fin: número final del rango
+#paso: incremento del rango
+#Si no se especifica el inicio, se asume que es 0
+#Si no se especifica el paso, se asume que es 1
+
+"""for i in range(2, 10, 2):
+    print(i)    """
+
+mi_lista = [5, 9, 13, -4, 22, 0, 1]
+
+for i in mi_lista:
+    if i == -4:
+        continue #Si encuentra un -4, se salta a la siguiente iteración
+    if i == 11:
+        break #Si encuentra un 11, se interrumpe el bucle
+    print(i)
+else:
+    print('No había ningún 11 en la lista') #No se ejecuta porque el bucle fue interrumpido por el break, si no se interrumpe, se ejecuta
+print('Finalizando la ejecución')
+
+#En este caso, se recorre la lista mi_lista y se imprimen los elementos que no son -4. Si se encuentra un 11, se interrumpe el bucle y se imprime 'No había ningún 11 en la lista'. Si no se encuentra un 11, se imprime 'Finalizando la ejecución'. 
+
+#como regla general para recorrer una colección uso un bucle for
+#si no se cuantas veces se va a repetir uso un bucle while
+#si tengo que recorrer una colección y necesito el indice uso enumerate
+#si tengo que recorrer una colección y necesito el valor y el indice uso enumerate
+
+ 

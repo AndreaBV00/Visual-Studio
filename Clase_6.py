@@ -29,3 +29,10 @@ if name[0] == 'A':
 if name == name.capitalize():
     print('Tu nombre está bien escrito')
 print('Finalizando la ejecución')
+
+#if condicion:
+#    bloque de código
+#elif condicion:
+#    bloque de código
+#else:  
+#    bloque de código

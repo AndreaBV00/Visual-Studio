@@ -11,10 +11,10 @@ lista_palabras = ["auto", "elefente", "palanca", "hadoooken", "electricista", "p
 cadena = "el murciélago se atoró en la trompeta de guido higuera"
 
 #solución
-def palabras(lista, string):
+def palabras(lista, string_a):
     lista2 = []
     for palabra in lista:
-        if all(palabra.count(letra) <= string.count(letra) for letra in palabra): #se cuenta la cantidad de veces que aparece cada letra de la palabra en el string
+        if all(palabra.count(letra) <= string_a.count(letra) for letra in palabra): #se cuenta la cantidad de veces que aparece cada letra de la palabra en el string
             lista2.append(palabra) #si la cantidad de veces que aparece cada letra de la palabra en el string es menor o igual a la cantidad de veces que aparece en la palabra, se agrega la palabra a la lista
     return lista2
 

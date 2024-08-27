@@ -13,5 +13,9 @@
 #¿Qué es un módulo? Un módulo es un archivo que contiene código fuente de un programa. En Python, los módulos son archivos con extensión .py. Los módulos pueden ser
 # importados por otros módulos o scripts. Los módulos pueden contener variables, funciones, clases, etc. Los módulos pueden ser reutilizados en diferentes programas.
 
-from func_mate import suma, resta #importamos las funciones suma y resta del módulo func_mate
+from func_mate import suma #importamos las funciones suma del módulo func_mate
 from personas import persona #importamos la clase persona del módulo personas
+print(suma(5, 3)) #imprimimos la suma de 5 y 3
+print(persona("Juan", 25, "M").mostrar()) #creamos un objeto de la clase persona y llamamos al método mostrar
+
+#¿Qué es un paquete? Un paquete es un directorio que contiene módulos y/o subpaquetes. En Python, los paquetes son directorios que contienen un archivo __init__.py.

@@ -1,4 +1,11 @@
-#función para ejecutar el programa
+# Version: 1.0
+
+#Importaciones
+from Clase_Cliente import *
+from Clase_Producto import *
+from Funciones_cliente import *
+from Funciones_producto import *
+
 def main():
     while True:
         print("1. Crear cliente")
@@ -41,3 +48,6 @@ def main():
             break
         else:
             print("Opción inválida")
+
+#llamada a la función principal
+main()

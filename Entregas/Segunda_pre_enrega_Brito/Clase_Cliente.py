@@ -18,3 +18,22 @@
 # Para crear el paquete distribuible también como adicional el archivo de la Pre entrega #1.
 # Es opcional el uso de herencia."
 
+
+class Cliente:
+    def __init__(self, nombre, apellido, edad, direccion, usuario, password):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.edad = edad
+        self.direccion = direccion
+        self.usuario = usuario  
+        self.password = password
+
+    def __str__(self):
+        return f"Nombre: {self.nombre}, Apellido: {self.apellido}, Edad: {self.edad}, Dirección: {self.direccion}"
+
+    def comprar(self, producto):
+        return f"{self.nombre} ha comprado {producto}"
+    
+    def cambiar_contraseña(self, nueva_contraseña):
+        self.contraseña = nueva_contraseña
+        return f"Contraseña cambiada con éxito"

@@ -1,0 +1,10 @@
+setup.py
+Paquete_Brito/Clase_Cliente.py
+Paquete_Brito/Clase_Producto.py
+Paquete_Brito/Menu.py
+Paquete_Brito/Primera_pre-entrega_Brito.py
+Paquete_Brito/__init__.py
+Paquete_Brito.egg-info/PKG-INFO
+Paquete_Brito.egg-info/SOURCES.txt
+Paquete_Brito.egg-info/dependency_links.txt
+Paquete_Brito.egg-info/top_level.txt

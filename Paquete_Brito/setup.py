@@ -4,9 +4,9 @@ Description = 'Modelamiento de Clientes en una página de compras'
 Author = 'Andrea Brito'
 
 setup(
-    name='Segunda_pre_entrega_Brito',
+    name='Paquete_Brito',
     version=Version,
     description=Description,
     author=Author,
-    packages=['Segunda_pre_entrega_Brito']
+    packages=['Paquete_Brito']
 )

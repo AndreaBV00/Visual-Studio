@@ -1,53 +1,73 @@
-# Version: 1.0
+#importamos clases
+from Clase_Cliente import Cliente
+from Clase_Producto import Producto
 
-#Importaciones
-from Clase_Cliente import *
-from Clase_Producto import *
-from Funciones_cliente import *
-from Funciones_producto import *
+#funcion para mostrar el menu
+def mostrar_menu():
+    print("1. Crear Cliente")
+    print("2. Crear Producto")
+    print("3. Salir")
+    opcion = input("Ingrese una opción: ")
+    return opcion
 
+#función para ejecutar la opción seleccionada (con manejo de errores)
+def ejecutar_opcion(opcion):
+    if opcion == "1":
+        try:
+            nombre = input("Ingrese el nombre del cliente: ")
+            apellido = input("Ingrese el apellido del cliente: ")
+            edad = int(input("Ingrese la edad del cliente: "))
+            email = input("Ingrese el email del cliente: ")
+        
+            # Crear una instancia temporal para verificar el email
+            cliente_temp = Cliente(nombre, apellido, edad, email)        
+            if cliente_temp.verificar_email(email) == True:
+                cliente = Cliente(nombre, apellido, edad, email)
+                print("Cliente creado con éxito")
+                print(cliente)
+            else:
+                print("Email inválido. No se pudo crear el cliente.")
+                return True
+        except ValueError:
+            print("Error: La edad debe ser un número entero.")
+            return True
+        except Exception as e:
+            print(f"Ha ocurrido un error inesperado: {e}")
+            return
+            
+    elif opcion == "2":
+        try:
+            nombre = input("Ingrese el nombre del producto: ")
+            precio = int(input("Ingrese el precio del producto: "))
+            producto = Producto(nombre, precio)
+            print("Producto creado con éxito")
+            print(producto)
+        except ValueError:
+            print("El precio debe ser un número entero, intente nuevamente")
+            return True
+    elif opcion == "3":
+        print("Saliendo del programa")
+        return False
+    else:
+        raise ValueError("Opción inválida")
+    return True
+
+#función principal pqra ejecutar el programa
 def main():
     while True:
-        print("1. Crear cliente")
-        print("2. Mostrar cliente")
-        print("3. Cambiar contraseña")
-        print("4. Comprar")
-        print("5. Crear producto")
-        print("6. Mostrar producto")
-        print("7. Cambiar precio")
-        print("8. Vender")
-        print("9. Agregar producto")
-        print("10. Salir")
-        opcion = input("Ingrese una opción: ")
-        if opcion == "1":
-            nombre, apellido, edad, direccion, usuario, password = pedir_datos_cliente()
-            cliente = Cliente(nombre, apellido, edad, direccion, usuario, password)
-        elif opcion == "2":
-            mostrar_datos_cliente(cliente)
-        elif opcion == "3":
-            nueva_contraseña = input("Ingrese la nueva contraseña: ")
-            cliente.cambiar_contraseña(nueva_contraseña)
-        elif opcion == "4":
-            producto = input("Ingrese el producto que desea comprar: ")
-            print(cliente.comprar(producto))
-        elif opcion == "5":
-            nombre, precio = pedir_datos_producto()
-            producto = Producto(nombre, precio)
-        elif opcion == "6":
-            mostrar_datos_producto(producto)
-        elif opcion == "7":
-            nuevo_precio = float(input("Ingrese el nuevo precio: "))
-            producto.cambiar_precio(nuevo_precio)
-        elif opcion == "8":
-            cantidad = int(input("Ingrese la cantidad de productos vendidos: "))
-            print(producto.vender(cantidad))
-        elif opcion == "9":
-            cantidad = int(input("Ingrese la cantidad de productos agregados: "))
-            print(producto.agregar_producto(cantidad))
-        elif opcion == "10":
-            break
-        else:
-            print("Opción inválida")
-
+        opcion = mostrar_menu()
+        try:
+            continuar = ejecutar_opcion(opcion)
+            if continuar == False:
+                break
+        except ValueError as e:
+            print(e)
+            print("Intente nuevamente")
+        except Exception as e:
+            print(f"Ha ocurrido un error inesperado: {e}")
+            print("Intente nuevamente")
+            
 #llamada a la función principal
-main()
+if __name__ == "__main__":
+    main()
+    

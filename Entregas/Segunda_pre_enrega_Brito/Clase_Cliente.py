@@ -1,39 +1,17 @@
-# Objetivo
-# Practicar el concepto de Clases y Objetos.
+#creamos la clase cliente
 
-# Consigna
-
-# Crear un programa que permita el modelamiento de Clientes en una página de compras. Se debe utilizar el concepto de Programación Orientada a Objetos y lo aprendido en clase.
-# Se evaluará el uso correcto de atributos y métodos.
-# Utilizar los conceptos aprendidos en la clase 15 y crear un paquete redistribuible con el programa creado."
-# Formato
-
-# El proyecto debe ser un archivo comprimido del paquete. Formatos aceptados: .zip o .tar.gz bajo el nombre “Segunda pre-entrega+Apellido”.
-# e debe entregar
-# Se debe entregar todo el programa.
-
-# Sugerencias
-# "La Clase Cliente debe tener mínimo 4 atributos y 2 métodos.
-# Se debe utilizar el método __str__() para darle nombre a los objetos.
-# Para crear el paquete distribuible también como adicional el archivo de la Pre entrega #1.
-# Es opcional el uso de herencia."
-
-
-class Cliente:
-    def __init__(self, nombre, apellido, edad, direccion, usuario, password):
+class Cliente:  
+    def __init__(self, nombre, apellido, edad, email): #clase con 4 atributos y 2 métodos
         self.nombre = nombre
         self.apellido = apellido
         self.edad = edad
-        self.direccion = direccion
-        self.usuario = usuario  
-        self.password = password
+        self.email = email
 
     def __str__(self):
-        return f"Nombre: {self.nombre}, Apellido: {self.apellido}, Edad: {self.edad}, Dirección: {self.direccion}"
-
-    def comprar(self, producto):
-        return f"{self.nombre} ha comprado {producto}"
+        return f"Nombre: {self.nombre} Apellido: {self.apellido} Edad: {self.edad} Email: {self.email}"
     
-    def cambiar_contraseña(self, nueva_contraseña):
-        self.contraseña = nueva_contraseña
-        return f"Contraseña cambiada con éxito"
+    def verificar_email(self, email): #Verifica si el email tiene un formato válido
+        if "@" in email and "." in email:
+            return True
+        else:
+            return False
